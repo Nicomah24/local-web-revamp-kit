@@ -1,73 +1,156 @@
-# Welcome to your Lovable project
 
-## Project info
+# Bella Vista Restaurant Website
 
-**URL**: https://lovable.dev/projects/3f16bb45-d644-4d39-abe9-9667a98463af
+A modern, responsive restaurant website built with React, TypeScript, and Tailwind CSS. This project showcases a complete restaurant web presence with online menu, reservation system, and contact information.
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **Modern Design**: Clean, mobile-first UI with warm Italian restaurant theme
+- **Interactive Menu**: Filterable menu with categories and dietary preferences
+- **Reservation System**: Complete booking form with validation
+- **Customer Testimonials**: Rotating testimonial carousel
+- **Contact Information**: Complete contact details with map placeholder
+- **Responsive Layout**: Optimized for all devices from mobile to desktop
+- **Smooth Animations**: Subtle animations and hover effects
+- **SEO Optimized**: Proper meta tags and semantic HTML
 
-**Use Lovable**
+## 🚀 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3f16bb45-d644-4d39-abe9-9667a98463af) and start prompting.
+- **React 18** - Modern JavaScript framework
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Fast build tool and development server
+- **Shadcn/ui** - Beautiful UI components
+- **Lucide React** - Icon library
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📋 Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd bella-vista-restaurant
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/
+│   ├── Header.tsx          # Navigation header with mobile menu
+│   ├── Hero.tsx            # Hero section with CTA buttons
+│   ├── Menu.tsx            # Interactive menu with filters
+│   ├── About.tsx           # Restaurant story and features
+│   ├── Reservations.tsx    # Booking form and info
+│   ├── Testimonials.tsx    # Customer testimonial carousel
+│   ├── Contact.tsx         # Contact info and map placeholder
+│   └── Footer.tsx          # Site footer
+├── pages/
+│   ├── Index.tsx           # Main page layout
+│   └── NotFound.tsx        # 404 error page
+├── hooks/
+│   └── use-toast.ts        # Toast notification hook
+└── lib/
+    └── utils.ts            # Utility functions
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 Customization
 
-## What technologies are used for this project?
+### Colors & Branding
+The design system is defined in `src/index.css` and `tailwind.config.ts`. Key color variables:
+- `--restaurant-gold`: Gold accent color
+- `--restaurant-brown`: Primary brown color
+- `--restaurant-cream`: Light background color
+- `--restaurant-dark`: Dark text color
 
-This project is built with:
+### Content Updates
+1. **Restaurant Info**: Update in `src/components/Contact.tsx` and `src/components/Footer.tsx`
+2. **Menu Items**: Modify the `menuItems` array in `src/components/Menu.tsx`
+3. **Testimonials**: Update the `testimonials` array in `src/components/Testimonials.tsx`
+4. **Images**: Replace placeholder images with your restaurant photos
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Google Maps Integration
+Replace the map placeholder in `src/components/Contact.tsx` with an actual Google Maps embed:
+```jsx
+<iframe
+  src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+```
 
-## How can I deploy this project?
+## 🚀 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/3f16bb45-d644-4d39-abe9-9667a98463af) and click on Share -> Publish.
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your GitHub repo to Vercel
+3. Deploy automatically on every push
 
-## Can I connect a custom domain to my Lovable project?
+### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to Netlify
 
-Yes, you can!
+### Manual Deployment
+1. Build the project: `npm run build`
+2. Upload the `dist` folder to your hosting provider
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📝 Environment Variables
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+No environment variables are required for the basic setup. For production, you may want to add:
+- Google Maps API key
+- Analytics tracking ID
+- Contact form submission endpoint
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Support
+
+For support and questions, please open an issue in the GitHub repository.
+
+---
+
+**Built with ❤️ for local restaurants looking to establish a strong online presence.**
